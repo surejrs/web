@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <nav>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Room-wise Appliance Data</h2>
+        <form id="dashboard-form">
+            <label for="role">Login as:</label>
+            <select id="role" name="role" required>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+            
+            <label for="room">Choose Room:</label>
+            <select id="room" name="room">
+                <option value="living-room">Living Room</option>
+                <option value="bathroom">Bathroom</option>
+                <option value="kitchen">Kitchen</option>
+                <option value="bedroom1">Bedroom 1</option>
+                <option value="bedroom2">Bedroom 2</option>
+                <!-- Add more rooms as needed -->
+            </select>
+            
+            <label for="appliance">Choose Appliance:</label>
+            <select id="appliance" name="appliance">
+                <!-- Appliances will be populated based on room selection using JavaScript -->
+            </select>
+            
+            <button type="button" id="view-data">View Data</button>
+        </form>
+
+        <!-- Placeholder for displaying data -->
+        <div id="data-display">
+            <h3>Data:</h3>
+            <div id="user-data" style="display: none;">
+                <!-- Data for user: Power and On/Off control -->
+            </div>
+            <div id="admin-data" style="display: none;">
+                <!-- Data for admin: Current, Voltage, Power -->
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
